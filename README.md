@@ -1,8 +1,8 @@
-======Requirements=====
+###Requirements
 
 Python (2.7.x, 3.x), python-pip, virtualenv
 
-======Installation=====
+###Installation
 
 --Create a virtual enviroment 
 
@@ -14,15 +14,16 @@ $ source env/bin/activate
 $ pip install -r requirements.txt
 
 
-======Third party packages used======
+###Third party packages used
 
-1- Requests (http://docs.python-requests.org/)
+1. Requests (http://docs.python-requests.org/)
 
 
-======postcode.py====
+###postcode.py
 - function generate_from_file(file_path)==> returns a generator of PostCode objects (given a file of postcode strings per line)
-
-- class PostCode():
+```
+class PostCode():
+```
 	properties:
 		- code
 		- outcode: the outward code of the objects post code
@@ -31,8 +32,9 @@ $ pip install -r requirements.txt
 		- nearest_info:  an array of information dicts about the nearest post codes to the object post code
 		- nearest_out_info: an array of information dicts about the nearest out codes to the objects outward code
 
-======Usage=====
+###Usage
 $python
+```pyhton
 >>>import postcode
 
 
@@ -47,9 +49,10 @@ $python
       ...:     print(code.outward_info)
       ...:     print(code.nearest_info)
       ...:     print(code.nearest_out_info)
+```
    
 
-======Constraint======
+###Constraint
 
 This library will not run offline since it depend on an external api to query post conde information
 
